@@ -1,6 +1,7 @@
 import React from "react";
+import './Part.css';
 
-export default function(props) {
+export default function (props) {
   return (
     <div className="part" key={props.id}>
       <img src={props.avatar} alt="" />
