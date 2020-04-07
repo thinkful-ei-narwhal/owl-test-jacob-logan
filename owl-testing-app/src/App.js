@@ -1,33 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import ParticipantList from './participantList'
+import React from "react";
+// import "./styles.css";
+// import Comp1 from "./Comp1";
+// import { Comp2 } from "./Comp1";
+// import abc from "./data";
+import Party from "./Part";
+// console.log(obj);
 
-
-
-function App() {
-
-    return (
-      <div className="App">
-        <ParticipantList />
-      </div>
-    );
- 
+export default function App(props) {
+  // console.log(props.data);
+  return (
+    <div className="App">
+      {props.data.participants.map(val => (
+        <Party
+          key={val.id}
+          avatar={val.avatar}
+          name={val.name}
+          onStage={val.onStage}
+        />
+      ))}
+    </div>
+  );
 }
-
-export default App;
-
-
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <main className='App'>
-//        <ParticipantList
-//         />
-//       </main>
-//     );
-//   }
-// }
-
-// export default App;
-
