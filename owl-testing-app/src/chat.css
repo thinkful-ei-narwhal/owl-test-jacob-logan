@@ -1,0 +1,9 @@
+.chat {
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid black;
+    color: purple;
+    padding: 5px;
+    align-items: flex-start;
+    
+} 
